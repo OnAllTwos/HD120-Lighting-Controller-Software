@@ -12,3 +12,17 @@ C:\Users\Aaron\Documents\Visual Studio 2015\Projects\WindowsFormsApplication4\Wi
 C:\Users\Aaron\Documents\Visual Studio 2015\Projects\WindowsFormsApplication4\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.application
 C:\Users\Aaron\Documents\Visual Studio 2015\Projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe.manifest
 C:\Users\Aaron\Documents\Visual Studio 2015\Projects\WindowsFormsApplication4\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.application
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.config
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.pdb
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe.manifest
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.application
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csprojResolveAssemblyReference.cache
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Form1.resources
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.UserControl1.resources
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe.manifest
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.application

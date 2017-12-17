@@ -689,6 +689,7 @@
             this.TNE.TabIndex = 54;
             this.TNE.Text = "0";
             this.TNE.Visible = false;
+            this.TNE.TextChanged += new System.EventHandler(this.TNE_TextChanged);
             // 
             // modeB
             // 

@@ -1917,7 +1917,7 @@ namespace WindowsFormsApplication4
                     {
                         eff12isCC = true;
                     }
-                    effModes[10] = modeB.Text;
+                    effModes[11] = modeB.Text;
                     eff12v[7] = Convert.ToString(modeslctb);
                     eff12v[0] = var1b.Text;
                     eff12v[1] = var2b.Text;

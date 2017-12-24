@@ -109,6 +109,8 @@
             this.eff6 = new System.Windows.Forms.Button();
             this.eff1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -481,6 +483,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button10);
+            this.tabPage1.Controls.Add(this.button9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.comboBox2);
             this.tabPage1.Controls.Add(this.button8);
@@ -683,7 +687,7 @@
             // TNE
             // 
             this.TNE.Enabled = false;
-            this.TNE.Location = new System.Drawing.Point(129, 201);
+            this.TNE.Location = new System.Drawing.Point(132, 201);
             this.TNE.Name = "TNE";
             this.TNE.Size = new System.Drawing.Size(366, 20);
             this.TNE.TabIndex = 54;
@@ -1057,6 +1061,26 @@
             this.checkBox1.Visible = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(392, 331);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(262, 23);
+            this.button9.TabIndex = 71;
+            this.button9.Text = "Load Sequence from File";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(131, 331);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(255, 23);
+            this.button10.TabIndex = 72;
+            this.button10.Text = "Save Sequence to File";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1157,6 +1181,8 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 

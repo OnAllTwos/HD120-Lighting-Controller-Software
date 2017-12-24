@@ -42,17 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApplication4.exe" size="63928">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApplication4.exe" size="74680">
       <assemblyIdentity name="WindowsFormsApplication4" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KrEZyf3FbJeZLt3uAypnSZDU5bicfei2jxl7nqixGNM=</dsig:DigestValue>
+        <dsig:DigestValue>tjyRCH79aKw4MZgefDXDG7YuSE5/6qcscO5FQs1aMQs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="TextFile1.txt" size="3">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8ZRc1sGeVrPBx4lD717BgRaQekyh78QKV9SKsdt638U=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="WindowsFormsApplication4.exe.config" size="189">
     <hash>
       <dsig:Transforms>

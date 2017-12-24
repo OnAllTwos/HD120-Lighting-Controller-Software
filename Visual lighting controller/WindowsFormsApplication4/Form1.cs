@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -1254,6 +1255,15 @@ namespace WindowsFormsApplication4
         private void button7_Click(object sender, EventArgs e)
         {
             runSeq = true;
+            try
+            {
+                serialPort1.WriteLine("");
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Please Select a Port", "No Serial Port Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                runSeq = false;
+            }
             while (runSeq)
             {
                 if (eff1on.Checked)
@@ -1352,6 +1362,142 @@ namespace WindowsFormsApplication4
 
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            String rawSeq = "";
+            OpenFileDialog seqLoadDialog = new OpenFileDialog();
+            if (seqLoadDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader sr = new StreamReader(seqLoadDialog.FileName))
+                {
+                    rawSeq = sr.ReadToEnd();
+                    Console.WriteLine(rawSeq);
+                }
+            }
+                String[] loadChunkyPB = rawSeq.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                String[] enabledVals = loadChunkyPB[0].Split(',');
+                String[] loadCreamyPB1 = loadChunkyPB[1].Split(',');
+                String[] loadCreamyPB2 = loadChunkyPB[2].Split(',');
+                String[] loadCreamyPB3 = loadChunkyPB[3].Split(',');
+                String[] loadCreamyPB4 = loadChunkyPB[4].Split(',');
+                String[] loadCreamyPB5 = loadChunkyPB[5].Split(',');
+                String[] loadCreamyPB6 = loadChunkyPB[6].Split(',');
+                String[] loadCreamyPB7 = loadChunkyPB[7].Split(',');
+                String[] loadCreamyPB8 = loadChunkyPB[8].Split(',');
+                String[] loadCreamyPB9 = loadChunkyPB[9].Split(',');
+                String[] loadCreamyPB10 = loadChunkyPB[10].Split(',');
+                String[] loadCreamyPB11 = loadChunkyPB[11].Split(',');
+                String[] loadCreamyPB12 = loadChunkyPB[12].Split(',');
+                String[] effModesCreamy = loadChunkyPB[13].Split(',');
+                //Assigning on/off values
+                eff1on.Checked = Convert.ToBoolean(enabledVals[0]);
+                eff2on.Checked = Convert.ToBoolean(enabledVals[1]);
+                eff3on.Checked = Convert.ToBoolean(enabledVals[2]);
+                eff4on.Checked = Convert.ToBoolean(enabledVals[3]);
+                eff5on.Checked = Convert.ToBoolean(enabledVals[4]);
+                eff6on.Checked = Convert.ToBoolean(enabledVals[5]);
+                eff7on.Checked = Convert.ToBoolean(enabledVals[6]);
+                eff8on.Checked = Convert.ToBoolean(enabledVals[7]);
+                eff9on.Checked = Convert.ToBoolean(enabledVals[8]);
+                eff10on.Checked = Convert.ToBoolean(enabledVals[9]);
+                eff11on.Checked = Convert.ToBoolean(enabledVals[10]);
+                eff12on.Checked = Convert.ToBoolean(enabledVals[11]);
+                //Assigning effect modes
+                for (int i = 0; i < 12; i++)
+                {
+                    effModes[i] = effModesCreamy[i];
+                }
+                //Assigning variable values with 12 "for" loops instead of 2 nested "for" loops and a multidimensional array. Multidimensional arrays scare me.
+                for (int i = 0; i < 10; i++)
+                {
+                    eff1v[i] = loadCreamyPB1[i];
+                    eff1s = ">" + eff1v[9] + " 0 " + eff1v[7] + ">" + eff1v[9] + " 1 " + eff1v[0] + ">" + eff1v[9] + " 2 " + eff1v[1] + ">" + eff1v[9] + " 3 " + eff1v[2] + ">" + eff1v[9] + " 4 " + eff1v[3] + ">" + eff1v[9] + " 5 " + eff1v[4] + ">" + eff1v[9] + " 6 " + eff1v[5] + ">" + eff1v[9] + " 7 " + eff1v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff2v[i] = loadCreamyPB2[i];
+                    eff2s = ">" + eff2v[9] + " 0 " + eff2v[7] + ">" + eff2v[9] + " 1 " + eff2v[0] + ">" + eff2v[9] + " 2 " + eff2v[1] + ">" + eff2v[9] + " 3 " + eff2v[2] + ">" + eff2v[9] + " 4 " + eff2v[3] + ">" + eff2v[9] + " 5 " + eff2v[4] + ">" + eff2v[9] + " 6 " + eff2v[5] + ">" + eff2v[9] + " 7 " + eff2v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff3v[i] = loadCreamyPB3[i];
+                    eff3s = ">" + eff3v[9] + " 0 " + eff3v[7] + ">" + eff3v[9] + " 1 " + eff3v[0] + ">" + eff3v[9] + " 2 " + eff3v[1] + ">" + eff3v[9] + " 3 " + eff3v[2] + ">" + eff3v[9] + " 4 " + eff3v[3] + ">" + eff3v[9] + " 5 " + eff3v[4] + ">" + eff3v[9] + " 6 " + eff3v[5] + ">" + eff3v[9] + " 7 " + eff3v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff4v[i] = loadCreamyPB4[i];
+                    eff4s = ">" + eff4v[9] + " 0 " + eff4v[7] + ">" + eff4v[9] + " 1 " + eff4v[0] + ">" + eff4v[9] + " 2 " + eff4v[1] + ">" + eff4v[9] + " 3 " + eff4v[2] + ">" + eff4v[9] + " 4 " + eff4v[3] + ">" + eff4v[9] + " 5 " + eff4v[4] + ">" + eff4v[9] + " 6 " + eff4v[5] + ">" + eff4v[9] + " 7 " + eff4v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff5v[i] = loadCreamyPB5[i];
+                    eff5s = ">" + eff5v[9] + " 0 " + eff5v[7] + ">" + eff5v[9] + " 1 " + eff5v[0] + ">" + eff5v[9] + " 2 " + eff5v[1] + ">" + eff5v[9] + " 3 " + eff5v[2] + ">" + eff5v[9] + " 4 " + eff5v[3] + ">" + eff5v[9] + " 5 " + eff5v[4] + ">" + eff5v[9] + " 6 " + eff5v[5] + ">" + eff5v[9] + " 7 " + eff5v[6]; 
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff6v[i] = loadCreamyPB6[i];
+                    eff6s = ">" + eff6v[9] + " 0 " + eff6v[7] + ">" + eff6v[9] + " 1 " + eff6v[0] + ">" + eff6v[9] + " 2 " + eff6v[1] + ">" + eff6v[9] + " 3 " + eff6v[2] + ">" + eff6v[9] + " 4 " + eff6v[3] + ">" + eff6v[9] + " 5 " + eff6v[4] + ">" + eff6v[9] + " 6 " + eff6v[5] + ">" + eff6v[9] + " 7 " + eff6v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff7v[i] = loadCreamyPB7[i];
+                    eff7s = ">" + eff7v[9] + " 0 " + eff7v[7] + ">" + eff7v[9] + " 1 " + eff7v[0] + ">" + eff7v[9] + " 2 " + eff7v[1] + ">" + eff7v[9] + " 3 " + eff7v[2] + ">" + eff7v[9] + " 4 " + eff7v[3] + ">" + eff7v[9] + " 5 " + eff7v[4] + ">" + eff7v[9] + " 6 " + eff7v[5] + ">" + eff7v[9] + " 7 " + eff7v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff8v[i] = loadCreamyPB8[i];
+                    eff8s = ">" + eff8v[9] + " 0 " + eff8v[7] + ">" + eff8v[9] + " 1 " + eff8v[0] + ">" + eff8v[9] + " 2 " + eff8v[1] + ">" + eff8v[9] + " 3 " + eff8v[2] + ">" + eff8v[9] + " 4 " + eff8v[3] + ">" + eff8v[9] + " 5 " + eff8v[4] + ">" + eff8v[9] + " 6 " + eff8v[5] + ">" + eff8v[9] + " 7 " + eff8v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff9v[i] = loadCreamyPB9[i];
+                    eff9s = ">" + eff9v[9] + " 0 " + eff9v[7] + ">" + eff9v[9] + " 1 " + eff9v[0] + ">" + eff9v[9] + " 2 " + eff9v[1] + ">" + eff9v[9] + " 3 " + eff9v[2] + ">" + eff9v[9] + " 4 " + eff9v[3] + ">" + eff9v[9] + " 5 " + eff9v[4] + ">" + eff9v[9] + " 6 " + eff9v[5] + ">" + eff9v[9] + " 7 " + eff9v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff10v[i] = loadCreamyPB10[i];
+                    eff10s = ">" + eff10v[9] + " 0 " + eff10v[7] + ">" + eff10v[9] + " 1 " + eff10v[0] + ">" + eff10v[9] + " 2 " + eff10v[1] + ">" + eff10v[9] + " 3 " + eff10v[2] + ">" + eff10v[9] + " 4 " + eff10v[3] + ">" + eff10v[9] + " 5 " + eff10v[4] + ">" + eff10v[9] + " 6 " + eff10v[5] + ">" + eff10v[9] + " 7 " + eff10v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff11v[i] = loadCreamyPB11[i];
+                    eff11s = ">" + eff11v[9] + " 0 " + eff11v[7] + ">" + eff11v[9] + " 1 " + eff11v[0] + ">" + eff11v[9] + " 2 " + eff11v[1] + ">" + eff11v[9] + " 3 " + eff11v[2] + ">" + eff11v[9] + " 4 " + eff11v[3] + ">" + eff11v[9] + " 5 " + eff11v[4] + ">" + eff11v[9] + " 6 " + eff11v[5] + ">" + eff11v[9] + " 7 " + eff11v[6];
+                }
+                for (int i = 0; i < 10; i++)
+                {
+                    eff12v[i] = loadCreamyPB12[i];
+                    eff12s = ">" + eff12v[9] + " 0 " + eff12v[7] + ">" + eff12v[9] + " 1 " + eff12v[0] + ">" + eff12v[9] + " 2 " + eff12v[1] + ">" + eff12v[9] + " 3 " + eff12v[2] + ">" + eff12v[9] + " 4 " + eff12v[3] + ">" + eff12v[9] + " 5 " + eff12v[4] + ">" + eff12v[9] + " 6 " + eff12v[5] + ">" + eff12v[9] + " 7 " + eff12v[6];
+                }
+                //REALLY starting to wish I had just made a class for the Effects...
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog seqSaveDialog = new SaveFileDialog();
+            if (seqSaveDialog.ShowDialog() == DialogResult.OK)
+            {
+                Stream s = File.Open(seqSaveDialog.FileName, FileMode.Create);
+                using (StreamWriter sw = new StreamWriter(s))
+                {
+                    //Sequence save file is written here; Ln 1 = Enabled?, Lines 2-13 = Effect values
+                    sw.Write(eff1on.Checked + "," + eff2on.Checked + "," + eff3on.Checked + "," + eff4on.Checked + "," + eff5on.Checked + "," + eff6on.Checked + "," + eff7on.Checked + "," + eff8on.Checked + "," + eff9on.Checked + "," + eff10on.Checked + "," + eff11on.Checked + "," + eff12on.Checked + Environment.NewLine +
+                             eff1v[0] + "," + eff1v[1] + "," + eff1v[2] + "," + eff1v[3] + "," + eff1v[4] + "," + eff1v[5] + "," + eff1v[6] + "," + eff1v[7] + "," + eff1v[8] + "," + eff1v[9] + Environment.NewLine +
+                             eff2v[0] + "," + eff2v[1] + "," + eff2v[2] + "," + eff2v[3] + "," + eff2v[4] + "," + eff2v[5] + "," + eff2v[6] + "," + eff2v[7] + "," + eff2v[8] + "," + eff2v[9] + Environment.NewLine +
+                             eff3v[0] + "," + eff3v[1] + "," + eff3v[2] + "," + eff3v[3] + "," + eff3v[4] + "," + eff3v[5] + "," + eff3v[6] + "," + eff3v[7] + "," + eff3v[8] + "," + eff3v[9] + Environment.NewLine +
+                             eff4v[0] + "," + eff4v[1] + "," + eff4v[2] + "," + eff4v[3] + "," + eff4v[4] + "," + eff4v[5] + "," + eff4v[6] + "," + eff4v[7] + "," + eff4v[8] + "," + eff4v[9] + Environment.NewLine +
+                             eff5v[0] + "," + eff5v[1] + "," + eff5v[2] + "," + eff5v[3] + "," + eff5v[4] + "," + eff5v[5] + "," + eff5v[6] + "," + eff5v[7] + "," + eff5v[8] + "," + eff5v[9] + Environment.NewLine +
+                             eff6v[0] + "," + eff6v[1] + "," + eff6v[2] + "," + eff6v[3] + "," + eff6v[4] + "," + eff6v[5] + "," + eff6v[6] + "," + eff6v[7] + "," + eff6v[8] + "," + eff6v[9] + Environment.NewLine +
+                             eff7v[0] + "," + eff7v[1] + "," + eff7v[2] + "," + eff7v[3] + "," + eff7v[4] + "," + eff7v[5] + "," + eff7v[6] + "," + eff7v[7] + "," + eff7v[8] + "," + eff7v[9] + Environment.NewLine +
+                             eff8v[0] + "," + eff8v[1] + "," + eff8v[2] + "," + eff8v[3] + "," + eff8v[4] + "," + eff8v[5] + "," + eff8v[6] + "," + eff8v[7] + "," + eff8v[8] + "," + eff8v[9] + Environment.NewLine +
+                             eff9v[0] + "," + eff9v[1] + "," + eff9v[2] + "," + eff9v[3] + "," + eff9v[4] + "," + eff9v[5] + "," + eff9v[6] + "," + eff9v[7] + "," + eff9v[8] + "," + eff9v[9] + Environment.NewLine +
+                             eff10v[0] + "," + eff10v[1] + "," + eff10v[2] + "," + eff10v[3] + "," + eff10v[4] + "," + eff10v[5] + "," + eff10v[6] + "," + eff10v[7] + "," + eff10v[8] + "," + eff10v[9] + Environment.NewLine +
+                             eff11v[0] + "," + eff11v[1] + "," + eff11v[2] + "," + eff11v[3] + "," + eff11v[4] + "," + eff11v[5] + "," + eff11v[6] + "," + eff11v[7] + "," + eff11v[8] + "," + eff11v[9] + Environment.NewLine +
+                             eff12v[0] + "," + eff12v[1] + "," + eff12v[2] + "," + eff12v[3] + "," + eff12v[4] + "," + eff12v[5] + "," + eff12v[6] + "," + eff12v[7] + "," + eff12v[8] + "," + eff12v[9] + Environment.NewLine +
+                             effModes[0] + "," + effModes[1] + "," + effModes[2] + "," + effModes[3] + "," + effModes[4] + "," + effModes[5] + "," + effModes[6] + "," + effModes[7] + "," + effModes[8] + "," + effModes[9] + "," + effModes[10] + "," + effModes[11]);
+                }
+            }
+        }
+
         private void var5_TextChanged(object sender, EventArgs e)
         {
 
@@ -1414,29 +1560,64 @@ namespace WindowsFormsApplication4
         private void stageSet_Click(object sender, EventArgs e)
         {
             fnlCmd = "^" + fan + " 0 " + modeslct +"^" + fan + " 1 " + var1.Text + "^" + fan + " 2 " + var2.Text + "^" + fan + " 3 " + var3.Text + "^" + fan + " 4 " + var4.Text + "^" + fan + " 5 " + var5.Text + "^" + fan + " 6 " + var6.Text + "^" + fan + " 7 " + var7.Text;
-            serialPort1.WriteLine(fnlCmd);
+            try
+            {
+                serialPort1.WriteLine(fnlCmd);
+            }
+            catch(InvalidOperationException)
+            {
+                MessageBox.Show("Please Select a Port", "No Serial Port Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             fnlCmd = ">" + fan + " 0 " + modeslct + ">" + fan + " 1 " + var1.Text + ">" + fan + " 2 " + var2.Text + ">" + fan + " 3 " + var3.Text + ">" + fan + " 4 " + var4.Text + ">" + fan + " 5 " + var5.Text + ">" + fan + " 6 " + var6.Text + ">" + fan + " 7 " + var7.Text;
-            serialPort1.WriteLine(fnlCmd);
+            try
+            {
+                serialPort1.WriteLine(fnlCmd);
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Please Select a Port", "No Serial Port Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             cstCmd.Text = fnlCmd;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            serialPort1.WriteLine("<");
+            try
+            {
+                serialPort1.WriteLine("<");
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Please Select a Port", "No Serial Port Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            serialPort1.WriteLine("!");
+            try
+            {
+                serialPort1.WriteLine("!");
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Please Select a Port", "No Serial Port Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            serialPort1.WriteLine("$");
+            try
+            {
+                serialPort1.WriteLine("$");
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Please Select a Port", "No Serial Port Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -1484,6 +1665,10 @@ namespace WindowsFormsApplication4
 
         private void button6_Click_1(object sender, EventArgs e)
         {
+                //Elements 0-6 = Variable values (1-7)
+                //Element 7 = Selected mode
+                //Element 8 = Time to next Effect
+                //Element 9 = Selected lights
                 if(selectedEff == 1)
                 {
                     if (checkBox1.Checked)

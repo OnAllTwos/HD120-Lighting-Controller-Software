@@ -26,3 +26,4 @@ C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighti
 C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.GenerateResource.Cache
 C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.exe.manifest
 C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.application
+C:\Users\Aaron\Documents\GitHub\HD120-Lighting-Controller-Software\Visual lighting controller\WindowsFormsApplication4\obj\Debug\WindowsFormsApplication4.csproj.CoreCompileInputs.cache

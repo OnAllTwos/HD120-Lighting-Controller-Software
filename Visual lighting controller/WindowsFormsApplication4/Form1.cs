@@ -119,11 +119,21 @@ namespace WindowsFormsApplication4
                 var3l.Visible = true;
                 var3.Enabled = true;
                 var3.Visible = true;
+                var4l.Text = "Starting Saturation";
+                var4l.Enabled = true;
+                var4l.Visible = true;
+                var4.Enabled = true;
+                var4.Visible = true;
                 var5l.Text = "Phase Offset";
                 var5l.Enabled = true;
                 var5l.Visible = true;
                 var5.Enabled = true;
                 var5.Visible = true;
+                var6l.Text = "Ending Saturation";
+                var6l.Enabled = true;
+                var6l.Visible = true;
+                var6.Enabled = true;
+                var6.Visible = true;
                 var7l.Text = "Rate";
                 var7l.Enabled = true;
                 var7l.Visible = true;
@@ -143,7 +153,7 @@ namespace WindowsFormsApplication4
                 var2l.Visible = true;
                 var2.Enabled = true;
                 var2.Visible = true;
-                var3l.Text = "0/1 = Hue/Rainbow";
+                var3l.Text = "0Hue/1Rainbow/2Spkl";
                 var3l.Enabled = true;
                 var3l.Visible = true;
                 var3.Enabled = true;
@@ -182,7 +192,7 @@ namespace WindowsFormsApplication4
                 var2l.Visible = true;
                 var2.Enabled = true;
                 var2.Visible = true;
-                var3l.Text = "0/1 = Hue/Rainbow";
+                var3l.Text = "0Hue/1Rainbow/2Spkl";
                 var3l.Enabled = true;
                 var3l.Visible = true;
                 var3.Enabled = true;
@@ -221,7 +231,7 @@ namespace WindowsFormsApplication4
                 var2l.Visible = true;
                 var2.Enabled = true;
                 var2.Visible = true;
-                var3l.Text = "0/1 = Hue/Rainbow";
+                var3l.Text = "0Hue/1Rainbow/2Spkl";
                 var3l.Enabled = true;
                 var3l.Visible = true;
                 var3.Enabled = true;
@@ -279,7 +289,7 @@ namespace WindowsFormsApplication4
                 var2l.Visible = true;
                 var2.Enabled = true;
                 var2.Visible = true;
-                var3l.Text = "0/1 = Hue/Rainbow";
+                var3l.Text = "0Hue/1Rainbow/2Spkl";
                 var3l.Enabled = true;
                 var3l.Visible = true;
                 var3.Enabled = true;
